@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<AMB_SmokeleafMate.label>Chimarrão de fumo</AMB_SmokeleafMate.label>
+<AMB_SmokeleafMate.description>Uma infusão quente de ervas mate juntas com folhas de fumo, tendo efeitos semelhantes ao fumo de maneira leve.</AMB_SmokeleafMate.description>
+<AMB_SmokeleafMateHigh.label>Efeitos do chimarrão de fumo</AMB_SmokeleafMateHigh.label>
+<AMB_SmokeleafMateHigh.labelNoun>Efeitos do chimarrão de fumo</AMB_SmokeleafMateHigh.labelNoun>
+<AMB_SmokeleafMateHigh.description>Efeitos da folha de fumo no corpo, juntamente com chá mate diminuindo seus efeitos.</AMB_SmokeleafMateHigh.description>
+<AMB_SmokeleafMate.ingestible.ingestCommandString>Beber {0}</AMB_SmokeleafMate.ingestible.ingestCommandString>
+<AMB_SmokeleafMate.ingestible.ingestReportString>Bebendo {0}.</AMB_SmokeleafMate.ingestible.ingestReportString>
+
+</LanguageData>

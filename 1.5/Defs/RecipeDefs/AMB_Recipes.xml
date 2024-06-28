@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Smokeleaf Mate -->
+	
+	<RecipeDef>
+		<defName>AM_MakeSmokeleafMate</defName>
+		<label>make smokeleaf mate</label>
+		<description>Make a Mate using smokeleaf leaves. Not so strong as a smokeleaf joint, but it is safer to consume.\n\nEffects of the smokeleaf are reduced.</description>
+		<jobString>Making smokeleaf mate</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<workAmount>300</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>	
+			<li>DrugLab</li>
+		</recipeUsers>
+
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AM_RawYerba</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SmokeleafLeaves</li>
+					</thingDefs>
+				</filter>
+				<count>20</count>
+			</li>
+			
+
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>AM_RawYerba</li>
+				<li>SmokeleafLeaves</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>AM_RawYerba</li>
+				<li>SmokeleafLeaves</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</defaultIngredientFilter>
+		
+		<products>
+			<AMB_SmokeleafMate>5</AMB_SmokeleafMate>
+		</products>
+		<researchPrerequisite>AM_MateMaking</researchPrerequisite>
+		
+	</RecipeDef>
+		
+</Defs>

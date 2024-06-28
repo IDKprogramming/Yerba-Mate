@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="DrugBase">
+		<defName>AM_Mate</defName>
+		<label>Mate Tea</label>
+		<description>An infusion made from leaves of yerba mate. You can take lots of mates and feel even better.\n\nThere are myths that say that there is possible to survive several quardums drinking only mate.</description>
+
+		<graphicData>
+			<texPath>Things/Drinks/Mate</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<tickerType>Rare</tickerType>
+		
+		<rotatable>false</rotatable>
+		<stackLimit>25</stackLimit>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>6</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.08</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.12</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AM_DrankMate</hediffDef>
+					<severity>1.3</severity>
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		
+		<techLevel>Neolithic</techLevel>
+		<comps>     
+			
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<overdoseSeverityOffset>0</overdoseSeverityOffset>
+			</li>
+		</comps>
+		
+		
+	</ThingDef>
+</Defs>

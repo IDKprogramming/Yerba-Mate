@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+
+	<RecipeDef>
+		<defName>AM_MakeMate</defName>
+		<label>Mate Tea</label>
+		<description>Make mate, a warm infusion of Yerba Mate.</description>
+		<jobString>Making mate.</jobString>
+		<workSkill>Cooking</workSkill>
+		<workSpeedStat>DrugCookingSpeed</workSpeedStat>
+		<workAmount>300</workAmount>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_Brewing</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		
+		<recipeUsers>
+			<li>Campfire</li>
+			<li>ElectricStove</li>
+			<li>FueledStove</li>
+			<li>DrugLab</li>
+		</recipeUsers>
+
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>AM_RawYerba</li>
+					</thingDefs>
+				</filter>
+				<count>15</count>
+			</li>
+			
+
+		</ingredients>
+		<fixedIngredientFilter>			
+			<thingDefs>
+				<li>AM_RawYerba</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>			
+			<thingDefs>
+				<li>AM_RawYerba</li>
+				
+			</thingDefs>
+			<categories>
+				
+			</categories>
+		</defaultIngredientFilter>
+		
+		<products>
+			<AM_Mate>4</AM_Mate>
+		</products>
+		<researchPrerequisite>AM_MateMaking</researchPrerequisite>
+		
+	</RecipeDef>
+
+	
+
+
+
+
+
+
+
+</Defs>

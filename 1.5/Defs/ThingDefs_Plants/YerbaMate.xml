@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>	
+	<ThingDef ParentName="PlantBase">
+		<defName>AM_Yerba_Plant</defName>
+		<label>Yerba Mate</label>
+		<description>A plant whose leaves can be used to make mate, a very healthy infusion.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Nutrition>0.2</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/YerbaPlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<plant>
+			<fertilityMin>0.70</fertilityMin>
+			<fertilitySensitivity>1</fertilitySensitivity>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+			<maxMeshCount>1</maxMeshCount>
+			<harvestedThingDef>AM_RawYerba</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<harvestWork>300</harvestWork>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<sowResearchPrerequisites>
+				<li>AM_MateMaking</li>
+			</sowResearchPrerequisites>
+			<topWindExposure>0.1</topWindExposure>
+			<growDays>6</growDays>
+			<neverBlightable>false</neverBlightable>
+			<visualSizeRange>0.8~1</visualSizeRange>
+			<wildOrder>2</wildOrder>
+			<purpose>Food</purpose>
+
+		</plant>
+	</ThingDef>
+	
+		<ThingDef ParentName="RoughPlantBase">
+		<defName>AM_RawYerba</defName>
+		<label>Yerba mate leaves</label>
+		<description>Leaves from Yerba Mate, that can be used to make mate, a very healthy infusion.</description>
+		<soundInteract>Grain_Drop</soundInteract>
+		<soundDrop>Grain_Drop</soundDrop>	
+		<thingCategories>
+			<li>PlantMatter</li>
+		</thingCategories>
+
+		<graphicData>
+
+			<texPath>Things/Plant/YerbaRaw</texPath>
+
+		</graphicData>
+		<statBases>
+			<MarketValue>1.3</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>80</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+		</comps>
+		<ingestible>
+			<foodType>VegetarianAnimal</foodType>
+		</ingestible>
+	</ThingDef>
+</Defs>

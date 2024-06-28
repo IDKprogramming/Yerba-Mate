@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<!-- Smokeleaf Mate -->
+	
+	<ThingDef ParentName="DrugBase">
+		<defName>AMB_SmokeleafMate</defName>
+		<label>smokeleaf mate</label>
+		<description>A hot infusion of yerba mate mixed with smokeleaf plant leaves. The hot water along with the smokeleaf allows to feel the smokeleaf taste without getting so dizzy and stoned.</description>
+		<descriptionHyperlinks>
+		<HediffDef>AMB_SmokeleafMateHigh</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Drinks/SmokeleafMate</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<DeteriorationRate>0.5</DeteriorationRate>
+			<MarketValue>13</MarketValue>
+			<Mass>0.3</Mass>
+			<Flammability>0.5</Flammability>
+			<Nutrition>0.02</Nutrition>
+		</statBases>
+		<ingestible>
+			<foodType>Fluid, Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.4</joy>
+			<nurseable>true</nurseable>
+			<drugCategory>Social</drugCategory>
+			<ingestSound>Ingest_Drink</ingestSound>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.18,0,0)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestCommandString>Drink {0}</ingestCommandString>
+			<ingestReportString>Drinking {0}.</ingestReportString>
+			<chairSearchRadius>25</chairSearchRadius>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>AMB_SmokeleafMateHigh</hediffDef>
+					<severity>0.5</severity>
+					<toleranceChemical>Smokeleaf</toleranceChemical>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>SmokeleafTolerance</hediffDef>
+					<severity>0.012</severity>
+					<divideByBodySize>true</divideByBodySize>
+				</li> 
+			</outcomeDoers>
+		</ingestible>
+		
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>Smokeleaf</chemical>
+				<addictiveness>0.010</addictiveness>
+				<minToleranceToAddict>0.15</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.06</existingAddictionSeverityOffset>
+				<needLevelOffset>0.9</needLevelOffset>
+				<listOrder>1000</listOrder>
+			</li>
+		</comps>
+		
+	</ThingDef>
+	
+	<HediffDef>
+		<defName>AMB_SmokeleafMateHigh</defName>
+		<label>smokeleaf mate effect</label>
+		<labelNoun>smokeleaf mate effect</labelNoun>
+		<description>Smokeleaf's active chemical in the bloodstream. Mixed with hot water, it is less fuzzy.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>-2.5</severityPerDay>
+			<showHoursToRecover>true</showHoursToRecover>
+		  </li>
+		</comps>
+		  <stages>
+			<li>
+			  <hungerRateFactorOffset>0.15</hungerRateFactorOffset>
+			  <painOffset>-0.095</painOffset>
+			  <capMods>
+				<li>
+				  <capacity>Consciousness</capacity>
+				  <offset>-0.1</offset>
+				</li>
+				<li>
+				  <capacity>Moving</capacity>
+				  <offset>-0.06</offset>
+				</li>
+			  </capMods>
+			</li>
+		  </stages>
+    </HediffDef>
+  
+  <ThoughtDef>
+		<defName>AMB_SmokeleafMateHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>AMB_SmokeleafMateHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+		  <li>
+			<label>drank smokeleaf mate</label>
+			<description>I feel that taste, it makes me happy.</description>
+			<baseMoodEffect>9</baseMoodEffect>
+		  </li>
+		</stages>
+  </ThoughtDef>
+  
+</Defs>

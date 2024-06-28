@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>AM_DrankMate</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>AM_DrankMate</hediff>
+    <stages>
+      <li>
+        <label>Drank some mate</label>
+        <description>That was nice, I liked the taste and feel like having more!</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+	  <li>
+        <label>Drank many mates</label>
+        <description>This drink is amazing! I could drink it while doing anything!</description>
+        <baseMoodEffect>6</baseMoodEffect>
+      </li>
+	  <li>
+        <label>Drank a lot of mate</label>
+        <description>How nice, this drink is the fuel of my life!</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+	  <li>
+        <label>Drank enormous amounts of mate</label>
+        <description>I feel like I could do anything! How nice!</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+	  <li>
+        <label>Drank a ridiculous amount of mate</label>
+        <description>This is positively addictive!</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+    <HediffDef>
+    	<defName>AM_DrankMate</defName>
+    	<label>Mate</label>
+		<description>Drank a warm mate.</description>
+    	<initialSeverity>1</initialSeverity>
+  	<defaultLabelColor>(1,0,0.5)</defaultLabelColor>      	<hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-6.0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+        <li>
+          <minSeverity>1</minSeverity>
+          <label>Tasty</label>
+          <painFactor>0.98</painFactor>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.05</offset>
+              </li>
+              <li>
+                <capacity>Metabolism</capacity>
+                <offset>0.05</offset>
+              </li>
+            </capMods>
+        </li>
+		<li>
+          <minSeverity>2</minSeverity>
+          <label>Warm</label>
+          <painFactor>0.95</painFactor>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.08</offset>
+              </li>
+              <li>
+                <capacity>Metabolism</capacity>
+                <offset>0.1</offset>
+              </li>
+            </capMods>
+        </li>
+		<li>
+          <minSeverity>3</minSeverity>
+          <label>High</label>
+          <painFactor>0.9</painFactor>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.1</offset>
+              </li>
+              <li>
+                <capacity>Metabolism</capacity>
+                <offset>0.15</offset>
+              </li>
+            </capMods>
+        </li>
+		<li>
+          <minSeverity>5</minSeverity>
+          <label>Hot</label>
+          <painFactor>0.9</painFactor>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.1</offset>
+              </li>
+              <li>
+                <capacity>Metabolism</capacity>
+                <offset>0.18</offset>
+              </li>
+			  <li>
+                <capacity>Eating</capacity>
+                <offset>0.05</offset>
+              </li>
+            </capMods>
+        </li>
+		<li>
+          <minSeverity>7</minSeverity>
+          <label>Stoned</label>
+          <painFactor>0.87</painFactor>
+            <capMods>
+              <li>
+                <capacity>Consciousness</capacity>
+                <offset>0.1</offset>
+              </li>
+              <li>
+                <capacity>Metabolism</capacity>
+                <offset>0.2</offset>
+              </li>
+			  <li>
+                <capacity>Eating</capacity>
+                <offset>0.08</offset>
+              </li>
+			  <li>
+                <capacity>Moving</capacity>
+                <offset>0.1</offset>
+              </li>
+            </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	  <ThingDef ParentName="MealCooked">
+    <defName>AM_Biscuits</defName>
+    <label>biscuits</label>
+	<tradeability>Buyable</tradeability>
+    <description>A bag of biscuits, those are great with mate.\n\nA very old recipe from the farest Rimworlds, these biscuits are by far the most appreciated thing when it comes to snacks.</description>
+    <graphicData>
+      <texPath>Things/Biscuits</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>12</MarketValue>
+      <Nutrition>0.12</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+	  <optimalityOffsetHumanlikes>1</optimalityOffsetHumanlikes>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+  </ThingDef>
+</Defs>

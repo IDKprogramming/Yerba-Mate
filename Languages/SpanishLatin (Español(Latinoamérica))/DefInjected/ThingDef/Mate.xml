@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+<AM_Mate.label>Mate</AM_Mate.label>
+<AM_Mate.description>Una infusión hecha con hojas de yerba mate. Puedes tomar varios para sentirte mejor.</AM_Mate.description>
+<AM_Mate.ingestible.ingestCommandString>Beber {0}</AM_Mate.ingestible.ingestCommandString>
+<AM_Mate.ingestible.ingestReportString>Bebendo {0}.</AM_Mate.ingestible.ingestReportString>
+</LanguageData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>AM_MateMaking</defName>
+		<label>Mate Tea</label>
+		<description>Learn to plant Yerba Mate, a plant whose leaves can be used to make a healthy infusion.</description>
+		<baseCost>300</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.90</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>

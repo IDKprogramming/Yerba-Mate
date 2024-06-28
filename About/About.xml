@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Yerba Mate</name>
+	<author>Argón</author>
+	<supportedVersions>
+	<li>1.4</li>
+	<li>1.5</li>
+	</supportedVersions>
+	<incompatibleWith>
+	<li>Argon.ArgMate</li>
+	<li>Argon.ArgMate.MixedHerbs</li>
+	<li>Argon.ArgMate.Biscuits</li>
+	</incompatibleWith>
+	<modVersion IgnoreIfNoMatchingField="True">1.2</modVersion>
+	<packageId>Argon.ArgMate.New</packageId>
+	<description>Now you can make mate, a traditional South American caffeine-rich infused herbal drink.
+	
+Should be compatible with any mod, mid-save and latest versions. Full credits to Argón, the original creator of the mod.</description>
+</ModMetaData>
